@@ -1,23 +1,24 @@
-TWRP Device repository for TCL_P620M (Lineageos)
+TWRP Device repository for HUAWEI TIT-TL00 (Lineageos)
+---------------
 
-===========================
-
-For Stock 3.10.65 kernel
-
-Codename:Escape_CM
-
-CPU:MT6735
+How to compile:
 
 ---------------
-##How to compile:
 
-1. Get the latest Lineageos14.1 sources and twrp sources
-2. clone this device 
-3. cd device/TCL/Escape_CM/patches
-4. ./apply-patches.sh
-4.5 cd ../../../../
-4.8 ./build/envsetup.sh
-5. lunch lineage_Escape_CM-userdebug
-6. make -jX (where X is the # of your CPU threads +1) recoveryimage
 
-By wyk
+   Get the latest Lineageos14.1 sources and twrp sources
+
+   clone this device 
+
+   cd device/huawei/tit_tl00/patches
+
+   ./apply-patches.sh
+
+   cd ../../../../
+
+   ./build/envsetup.sh
+
+   lunch lineage_tit_tl00-userdebug
+
+   make -j16 recoveryimage
+

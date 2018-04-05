@@ -12,14 +12,14 @@ include $(call all-subdir-makefiles)
 PRODUCT_PACKAGES += charger charger_res_images
 
 # Release name
-PRODUCT_RELEASE_NAME := TCL_P620M
+PRODUCT_RELEASE_NAME := HUAWEI TIT-TL00
 
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Escape_CM
-PRODUCT_NAME := lineage_Escape_CM
-PRODUCT_BRAND := TCL
-PRODUCT_MODEL := TCL_P620M
-PRODUCT_MANUFACTURER := TCL
+PRODUCT_DEVICE := tit-tl00
+PRODUCT_NAME := lineage_tit_tl00
+PRODUCT_BRAND := HUAWEI
+PRODUCT_MODEL := HUAWEI TIT-TL00
+PRODUCT_MANUFACTURER := HUAWEI

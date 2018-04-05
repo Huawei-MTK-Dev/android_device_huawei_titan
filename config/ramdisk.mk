@@ -12,5 +12,5 @@ PRODUCT_COPY_FILES += \
 
 #TWRP
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(DEVICE_PATH)/recovery/recovery.fstab:recovery/root/etc/recovery.fstab
  

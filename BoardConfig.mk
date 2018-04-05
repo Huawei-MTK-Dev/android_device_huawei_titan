@@ -1,4 +1,4 @@
-DEVICE_PATH := device/TCL/Escape_CM
+DEVICE_PATH := device/huawei/tit_tl00
 
 USE_CAMERA_STUB := true
 
@@ -48,8 +48,7 @@ BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x03f88000
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/tools/mkbootimg.mk
-TARGET_KERNEL_CONFIG := lineage_ono_defconfig
-TARGET_KERNEL_SOURCE := kernel/TCL/Escape_CM
+TARGET_KERNEL_SOURCE := kernel/huawei/tit_tl00
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 #extracted from /proc/partinfo
