@@ -8,8 +8,8 @@ rootdirectory=/home/reallysnow/lineage
 
 dirs="frameworks/base frameworks/av system/netd system/core system/sepolicy"
 
-VENDOR=honor
-DEVICE=hn4cpro
+VENDOR=huawei
+DEVICE=tit
 # red + nocolor
 RED='\033[0;31m'
 NC='\033[0m'
