@@ -1,4 +1,4 @@
-LOCAL_PATH := device/honor/hn4cpro
+LOCAL_PATH := device/huawei/tit
 
 BLOCK_BASED_OTA := false
 

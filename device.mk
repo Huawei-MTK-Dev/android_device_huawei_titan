@@ -1,6 +1,6 @@
-LOCAL_PATH := device/honor/hn4cpro
+LOCAL_PATH := device/huawei/tit
 
-$(call inherit-product-if-exists, vendor/honor/hn4cpro/hn4cpro-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/tit/tit-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

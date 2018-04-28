@@ -1,5 +1,5 @@
 #
-# system.prop for Honor 4c Pro
+# system.prop for HUAWEI TIT-TL00
 
 # RIL
 ro.telephony.ril_class=MT6735

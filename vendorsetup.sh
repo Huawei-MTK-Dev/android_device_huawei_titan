@@ -1,3 +1,2 @@
-for var in eng user userdebug; do
-  add_lunch_combo viper_hn4cpro-$var
-done
+#used to add device to CM's lunch
+add_lunch_combo lineage_tit-userdebug
