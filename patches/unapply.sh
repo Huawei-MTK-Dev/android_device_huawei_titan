@@ -2,7 +2,7 @@
 
 echo $1
 #rootdirectory="$PWD"
-rootdirectory=/home/igor/android/rom/viper
+rootdirectory=/home/reallysnow/lineage
 
 # ---------------------------------
 
