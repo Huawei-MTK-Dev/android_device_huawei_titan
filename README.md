@@ -41,7 +41,7 @@ Add
 
 Build the code:
     
-    git clone https://github.com/rote66/android_device_huawei_tit_tl00.git -b lineage14.1 device/huawei/tit
+    git clone https://github.com/ReallySnow/android_device_huawei_tit_tl00.git -b lineage14.1 device/huawei/tit
     
     cd device/huawei/tit/patches
     
@@ -49,7 +49,7 @@ Build the code:
     
     cd ../../../../
     
-    git clone https://github.com/rote66/android_vendor_huawei_tit_tl00.git -b lineage14.1 vendor/huawei/tit
+    git clone https://github.com/ReallySnow/android_vendor_huawei_tit_tl00.git -b lineage14.1 vendor/huawei/tit
     
     source build/envsetup.sh
     
