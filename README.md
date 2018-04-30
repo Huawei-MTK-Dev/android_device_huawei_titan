@@ -29,7 +29,7 @@ Getting Started
 
 Initialize a repository with Los14.1:
 
-    repo init -u git://github.com/lineageos/android.git -b cm-14.1
+    repo init -u https://github.com/MoKee/android.git -b mko-mr1
     
 Sync sources:    
 
@@ -37,11 +37,12 @@ Sync sources:
     
 Add 
   
-   git clone http://github.com/LineageOS/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
+    git clone http://github.com/LineageOS/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
+ 
 
 Build the code:
     
-    git clone https://github.com/ReallySnow/android_device_huawei_tit_tl00.git -b lineage14.1 device/huawei/tit
+    git clone https://github.com/ReallySnow/android_device_huawei_tit_tl00.git -b mkn-mr1 device/huawei/tit
     
     cd device/huawei/tit/patches
     
