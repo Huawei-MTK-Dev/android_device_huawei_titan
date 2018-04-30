@@ -11,7 +11,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 export ANDROID_JACK_VM_ARGS += "-Xmx3072m"
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := TIT-L01,HWTIT-L6735
+TARGET_OTA_ASSERT_DEVICE := TIT-TL00,HWTIT-L6735
 
 # Device artwork density
 PRODUCT_AAPT_CONFIG := normal
@@ -123,4 +123,4 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
     persist.sys.usb.config=mtp,adb \
     ro.zygote=zygote64_32 \
-    persist.sys.timezone=Europe/Moscow
+    persist.sys.timezone=Asia/Shanghai

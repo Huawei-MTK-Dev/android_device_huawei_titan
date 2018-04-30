@@ -2,7 +2,7 @@
 
 echo $1
 #rootdirectory="$PWD"
-rootdirectory=/home/reallysnow/lineage
+rootdirectory=/home/reallysnow/Mokee
 
 # ---------------------------------
 
