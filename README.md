@@ -29,7 +29,7 @@ Getting Started
 
 Initialize a repository with Los14.1:
 
-    repo init -u https://github.com/MoKee/android.git -b mko-mr1
+    repo init -u https://github.com/MoKee/android.git -b mkn-mr1
     
 Sync sources:    
 
@@ -54,7 +54,7 @@ Build the code:
     
     source build/envsetup.sh
     
-    lunch lineage_tit-userdebug
+    lunch mk_tit-userdebug
     
     make -j4 bacon showcommands 2>&1 | tee build.log
     
