@@ -3,19 +3,19 @@ TWRP Device repository for HUAWEI TIT-TL00 (Lineageos)
 
 How to compile:
 
-   Get the latest Lineageos14.1 sources and twrp sources
+  Get the latest Lineageos14.1 sources and twrp sources
 
-   clone this device 
+  clone this device 
 
-   cd device/huawei/tit_tl00/patches
+  cd device/huawei/tit_tl00/patches
 
-   ./apply-patches.sh
+  ./apply-patches.sh
 
-   cd ../../../../
+  cd ../../../../
 
-   ./build/envsetup.sh
+  ./build/envsetup.sh
+   
+  lunch lineage_tit_tl00-userdebug
 
-   lunch lineage_tit_tl00-userdebug
-
-   make -j16 recoveryimage
+  make -j16 recoveryimage
 
