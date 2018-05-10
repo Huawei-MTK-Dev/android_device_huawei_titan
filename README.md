@@ -36,7 +36,7 @@ Sync sources:
     repo sync
     
 Add 
-  
+
     git clone http://github.com/Mokee/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
  
 
