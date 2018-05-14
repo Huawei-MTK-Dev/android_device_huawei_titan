@@ -1,28 +1,20 @@
-#!/bin/sh
-
-echo $1
-#rootdirectory="$PWD"
-rootdirectory=/home/reallysnow/Mokee
-
-# ---------------------------------
-
-dirs="frameworks/base frameworks/av system/netd system/core system/sepolicy"
-
-VENDOR=huawei
-DEVICE=tit
-# red + nocolor
-RED='\033[0;31m'
-NC='\033[0m'
-
-for dir in $dirs ; do
-	cd $rootdirectory
-	cd $dir
-	echo -e "${RED}Applying ${NC}$dir ${RED}patches...${NC}\n"
-	#git am $rootdirectory/device/$VENDOR/$DEVICE/patches/$dir/*.patch
-	git apply $rootdirectory/device/$VENDOR/$DEVICE/patches/$dir/*.patch
-done
-
-# -----------------------------------
-echo -e "Done !\n"
-cd $rootdirectory
-
+#!/bin/bash
+echo Install First Patches
+cd ../../../../
+cd system/sepolicy
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/0001-Revert-back-to-version-29.patch
+cd ../..
+echo Install Second Patches
+cd system/core
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/0001-Remove-CAP_SYS_NICE-from-surfaceflinger.patch
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/system_core_libnetutils.patch
+cd ../..
+echo Install Third Patches
+cd frameworks/native
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/frameworks_native_ui.patch
+cd ../..
+echo Install Last Patches
+cd system/netd
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/system_netd.patch
+cd ../..
+echo Patches Applied Successfully!
