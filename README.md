@@ -53,7 +53,7 @@ Build the code:
     
     source build/envsetup.sh
     
-    lunch mk_tit-userdebug
+    lunch mokee_tit-userdebug
     
     make -j4 bacon showcommands 2>&1 | tee build.log
     
