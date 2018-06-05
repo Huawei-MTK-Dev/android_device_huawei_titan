@@ -37,7 +37,7 @@ Sync sources:
     
 Add 
 
-    git clone http://github.com/Mokee/android_packages_resources_devicesettings.git -b cm-14.1 packages/resources/devicesettings
+    git clone http://github.com/Mokee/android_packages_resources_devicesettings.git -b mkn-mr1 packages/resources/devicesettings
 
 Build the code:
     
