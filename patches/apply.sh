@@ -16,5 +16,7 @@ cd ../..
 echo Install Last Patches
 cd system/netd
 git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/system_netd.patch
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/0001-Revert-Don-t-start-tethering-if-IPv6-RPF-is-not-supp.patch
+git apply --ignore-space-change --ignore-whitespace -v ../../device/huawei/tit/patches/0002-Enable-Tethering.patch
 cd ../..
 echo Patches Applied Successfully!
