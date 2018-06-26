@@ -8,11 +8,8 @@ import init.ssd.rc
 import init.no_ssd.rc
 import init.ssd_nomuser.rc
 import init.fon.rc
-import init.aee.rc
 import init.trustonic.rc
-#begin, [microtrust] [zhuzhen] [add] [add soter.raw to ota] [2015/07/09]
-#import init.neusoft.rc
-#end, [microtrust] [zhuzhen] [add] [add soter.raw to ota] [2015/07/09]
+
 on early-init
     # Set init and its forked children's oom_adj.
     write /proc/1/oom_score_adj -1000
@@ -37,12 +34,11 @@ on init
 
 loglevel 5
 
-# Backward compatibility
+    # Backward compatibility.
     symlink /system/etc /etc
     symlink /sys/kernel/debug /d
 
-# Right now vendor lives on the same filesystem as system,
-# but someday that may change.
+    # Link /vendor to /system/vendor for devices without a vendor partition.
     symlink /system/vendor /vendor
 
 # Temp Backward compatibility
@@ -115,7 +111,8 @@ on property:sys.boot_from_charger_mode=1
 
 # Load properties from /system/ + /factory after fs mount.
 on load_all_props_action
-    load_all_props
+    load_system_props
+    load_persist_props
 
 # Mount filesystems and start core system services.
 on late-init
@@ -156,8 +153,6 @@ on fs
     exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/logo
     exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/logo
     write /proc/bootprof "INIT:Mount_END"
-#add by zym
-   mkdir /log mount ext4 emmc@log /log
 
 on post-fs
     # once everything is setup, no need to modify /
@@ -195,10 +190,10 @@ on post-fs-data
     chmod 0771 /persist
 
     # create basic filesystem structure
-    #mkdir /data/nvram 0770 root system
-	# We chown/chmod /nvdata again so because mount is run as root + defaults
+    #mkdir /data/nvram 2770 root system
+    # We chown/chmod /nvdata again so because mount is run as root + defaults
     chown root system /nvdata
-    chmod 0770 /nvdata
+    chmod 2770 /nvdata
     symlink /nvdata /data/nvram
 
     # Set SELinux security contexts on upgrade or policy update.
@@ -265,8 +260,6 @@ on post-fs-data
     # Turn off wifi by default
     write /sys/class/rfkill/rfkill1/state 0
 
-
-
     #otp
     chmod 0660 /dev/otp
     chown root system /dev/otp
@@ -275,14 +268,11 @@ on post-fs-data
     chown system system /sys/touchpanel/calibration
     chmod 0660 /sys/touchpanel/calibration
 
-    chmod 0777 /dev/pmem_multimedia
-    chmod 0777 /dev/mt6516-isp
-    chmod 0777 /dev/mt6516-IDP
-    chmod 0777 /dev/mt9p012
-    chmod 0777 /dev/mt6516_jpeg
-    chmod 0777 /dev/FM50AF
-
-
+    chmod 0664 /dev/pmem_multimedia
+    chmod 0664 /dev/mt6516-isp
+    chmod 0664 /dev/mt6516-IDP
+    chmod 0664 /dev/mt9p012
+    chmod 0664 /dev/mt6516_jpeg
 
     # RTC
     mkdir /data/misc/rtc 0770 system system
@@ -441,8 +431,8 @@ service debuggerd64 /system/bin/debuggerd64
 service mobile_log_d /system/bin/mobile_log_d
     class main
 
-on property:ro.boot.mblogenable=0    
-    stop mobile_log_d    
+on property:ro.boot.mblogenable=0
+    stop mobile_log_d
 
 on property:ro.boot.mblogenable=1
     start mobile_log_d

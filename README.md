@@ -1,21 +1,22 @@
-TWRP Device repository for HUAWEI TIT-TL00 (Lineageos)
----------------
+TWRE Tree By HUAWEI Enjoy5 (TIT-TL00，AL00 and L01)
+===========================
+First clone LineageOS source
 
-How to compile:
+    repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_lineageos.git -b twrp-14.1
+    
+    repo sync -j8
 
-  Get the latest Lineageos14.1 sources and twrp sources
+Then
 
-  clone this device 
+    cd device/huawei/tit/patches
 
-  cd device/huawei/tit_tl00/patches
+    ./apply.sh
 
-  ./apply-patches.sh
+    cd ../../../../
 
-  cd ../../../../
-
-  ./build/envsetup.sh
+    . build/envsetup.sh
    
-  lunch lineage_tit_tl00-userdebug
+    lunch lineage_tit-userdebug or breakfast tit
 
-  make -j16 recoveryimage
+    mka -j16 recoveryimage
 
