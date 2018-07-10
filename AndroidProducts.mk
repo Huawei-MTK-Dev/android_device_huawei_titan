@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_tit.mk
+    $(LOCAL_DIR)/cm.mk
