@@ -11,7 +11,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 export ANDROID_JACK_VM_ARGS += "-Xmx3072m"
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := TIT-TL00,HWTIT-L6735
+TARGET_OTA_ASSERT_DEVICE := tit,tit_tl00,TIT-TL00,HWTIT-L6735
 
 # Device artwork density
 PRODUCT_AAPT_CONFIG := normal
