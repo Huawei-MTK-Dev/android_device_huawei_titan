@@ -1,7 +1,6 @@
 
 LOCAL_PATH := device/huawei/tit
 
-BLOCK_BASED_OTA := false
 
 # Platform
 TARGET_NO_BOOTLOADER := true
