@@ -7,8 +7,12 @@ First clone LineageOS source
     repo sync -j8
 
 Then
+    
+    cd your source catalog
+    
+    git clone https://github.com/ReallySnow/twrp_device_huawei_tit_tl00.git device/huawei/tit_tl00
 
-    cd device/huawei/tit/patches
+    cd device/huawei/tit_tl00/patches
 
     ./apply.sh
 
@@ -16,7 +20,7 @@ Then
 
     . build/envsetup.sh
    
-    lunch lineage_tit-userdebug or breakfast tit
+    lunch lineage_tit_tl00-eng
 
     mka -j16 recoveryimage
 
