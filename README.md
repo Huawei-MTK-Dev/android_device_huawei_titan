@@ -1,4 +1,4 @@
-TWRE Tree By HUAWEI Enjoy5 (TIT-TL00，AL00 and L01)
+TWRP Tree By HUAWEI Enjoy5 (TIT-TL00，AL00 and L01)
 ===========================
 First clone LineageOS source
 
